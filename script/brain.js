@@ -42,3 +42,18 @@ message.addEventListener("keyup", function(event) {
 reset.addEventListener('click', function() {
     content.innerHTML = "";
 });
+
+
+//below that line I am coding the chatbot part
+
+var bot = new RiveScript();
+
+bot.loadFile("script/brain.rive").then(brainReady).catch(brainError);
+
+function brainReady() {
+    console.log("Bob is ready !");
+}
+
+function brainError() {
+    alert("There is an error with Rivescript");
+}
