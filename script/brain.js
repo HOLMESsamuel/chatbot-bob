@@ -13,6 +13,8 @@ bot.loadFile("script/brain.rive").then(brainReady).catch(brainError);
 function brainReady() {
     console.log("Bob is ready !");
     bot.sortReplies(); //once every file is loaded replies need to be sorted
+    let num = Math.floor(Math.random() * 20);
+    let rep = bot.reply(username, "set " + num);
 }
 
 function brainError() {
@@ -53,6 +55,7 @@ send.addEventListener('click', function() {
     content.appendChild(bobLine);
 
     bot.reply(username, message).then(function(reply) {
+
         bobLine.innerHTML = reply;
     });
 
@@ -78,18 +81,3 @@ message.addEventListener("keyup", function(event) {
 reset.addEventListener('click', function() {
     content.innerHTML = "";
 });
-
-
-//below that line I am coding the chatbot part
-
-var bot = new RiveScript();
-
-bot.loadFile("script/brain.rive").then(brainReady).catch(brainError);
-
-function brainReady() {
-    console.log("Bob is ready !");
-}
-
-function brainError() {
-    alert("There is an error with Rivescript");
-}
