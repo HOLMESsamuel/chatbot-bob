@@ -1,0 +1,43 @@
+img {
+    width: 36%;
+    height: auto;
+    margin: 0px 32%;
+}
+
+#content {
+    text-align: left;
+    max-height: 300px;
+    overflow-y: scroll;
+    transition: 3s ease-out;
+}
+
+
+/*hide the content scrollbar in chrome and safari */
+
+#content::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.userLine {
+    float: right;
+    margin: 5px 0px;
+    padding: 3px 6px;
+    text-align: left;
+    background-color: rgb(0, 162, 255);
+    color: white;
+    border-radius: 10px;
+    word-wrap: break-word;
+    max-width: 60%;
+    left: 50%;
+}
+
+.bobLine {
+    float: left;
+    margin: 5px 0px;
+    padding: 3px 6px;
+    text-align: left;
+    background-color: rgb(180, 179, 179);
+    color: black;
+    border-radius: 10px;
+    max-width: 60%;
+}
